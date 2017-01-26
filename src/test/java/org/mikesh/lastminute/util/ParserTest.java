@@ -9,5 +9,7 @@ public class ParserTest {
     public void firstTest() throws Exception {
 
 
+        System.out.println("test");
+
     }
 }
