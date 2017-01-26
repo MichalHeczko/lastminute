@@ -1,9 +1,8 @@
-package org.mikesh.lastminute.util;
+package org.mikesh.lastminute;
 
 import org.junit.Test;
 
 public class ParserTest {
-
 
     @Test
     public void firstTest() throws Exception {
