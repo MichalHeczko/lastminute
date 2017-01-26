@@ -1,16 +1,18 @@
 package org.mikesh.lastminute;
 
+import java.math.BigDecimal;
+
 public class Goods {
     private final int amount;
     private final boolean imported;
-    private final boolean taxApplicable;
+    private final boolean exampt;
     private final String name;
-    private final double price;
+    private final BigDecimal price;
 
-    public Goods(int amount, boolean imported, boolean taxApplicable, String name, double price) {
+    public Goods(int amount, boolean imported, boolean exampt, String name, BigDecimal price) {
         this.amount = amount;
         this.imported = imported;
-        this.taxApplicable = taxApplicable;
+        this.exampt = exampt;
         this.name = name;
         this.price = price;
     }
@@ -23,15 +25,15 @@ public class Goods {
         return imported;
     }
 
-    public boolean isTaxApplicable() {
-        return taxApplicable;
+    public boolean isExampt() {
+        return exampt;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 }
