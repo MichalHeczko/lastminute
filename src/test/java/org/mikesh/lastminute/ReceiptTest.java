@@ -23,8 +23,6 @@ public class ReceiptTest {
         assertEquals(BigDecimal.valueOf(1.50), receipt.getSalesTax());
         assertEquals(BigDecimal.valueOf(29.83), receipt.getTotal());
         assertEquals(getOutput1(), receipt.toString());
-
-        System.out.println(receipt);
     }
 
     @Test
@@ -39,8 +37,6 @@ public class ReceiptTest {
         assertEquals(BigDecimal.valueOf(7.65), receipt.getSalesTax());
         assertEquals(BigDecimal.valueOf(65.15), receipt.getTotal());
         assertEquals(getOutput2(), receipt.toString());
-
-        System.out.println(receipt);
     }
 
     @Test
@@ -57,8 +53,6 @@ public class ReceiptTest {
         assertEquals(BigDecimal.valueOf(6.70), receipt.getSalesTax());
         assertEquals(BigDecimal.valueOf(74.68), receipt.getTotal());
         assertEquals(getOutput3(), receipt.toString());
-
-        System.out.println(receipt);
     }
 
     private String getOutput1() {
