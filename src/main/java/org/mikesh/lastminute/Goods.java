@@ -2,14 +2,14 @@ package org.mikesh.lastminute;
 
 import java.math.BigDecimal;
 
-public class Goods {
+class Goods {
     private final int amount;
     private final boolean imported;
     private final boolean exampt;
     private final String name;
     private final BigDecimal price;
 
-    public Goods(int amount, boolean imported, boolean exampt, String name, BigDecimal price) {
+    Goods(int amount, boolean imported, boolean exampt, String name, BigDecimal price) {
         this.amount = amount;
         this.imported = imported;
         this.exampt = exampt;
@@ -17,23 +17,23 @@ public class Goods {
         this.price = price;
     }
 
-    public int getAmount() {
+    int getAmount() {
         return amount;
     }
 
-    public boolean isImported() {
+    boolean isImported() {
         return imported;
     }
 
-    public boolean isExampt() {
+    boolean isExampt() {
         return exampt;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public BigDecimal getPrice() {
+    BigDecimal getPrice() {
         return price;
     }
 }
