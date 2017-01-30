@@ -2,11 +2,11 @@ package org.mikesh.lastminute;
 
 import java.math.BigDecimal;
 
-public class TaxCalculator {
+class TaxCalculator {
     private final static int GOODS_TAX_RATE = 10;
     private final static int IMPORT_TAX_RATE = 5;
 
-    public static BigDecimal calculate(Goods goods) {
+    static BigDecimal calculate(Goods goods) {
         double taxRate = 0;
         if (goods.isImported())
             taxRate += IMPORT_TAX_RATE;

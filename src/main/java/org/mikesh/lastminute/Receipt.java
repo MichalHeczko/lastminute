@@ -4,11 +4,12 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class Receipt {
-    private List<Goods> goodsList;
+    final private List<Goods> goodsList;
     private BigDecimal salesTax = BigDecimal.ZERO;
     private BigDecimal total = BigDecimal.ZERO;
+    private String printing;
 
-    public Receipt(List<Goods> goodsList) {
+    Receipt(final List<Goods> goodsList) {
         this.goodsList = goodsList;
 
         for (Goods goods : goodsList) {
@@ -16,18 +17,11 @@ public class Receipt {
             salesTax = salesTax.add(tax);
             total = total.add(BigDecimal.valueOf(goods.getAmount()).multiply(goods.getPrice()).add(tax));
         }
+
+        printing = printing();
     }
 
-    public BigDecimal getSalesTax() {
-        return salesTax;
-    }
-
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    @Override
-    public String toString() {
+    private String printing() {
         StringBuilder sb = new StringBuilder();
 
         for (Goods goods : goodsList) {
@@ -48,5 +42,18 @@ public class Receipt {
         sb.append("Total: ").append(getTotal().setScale(2)).append('\n');
 
         return sb.toString();
+    }
+
+    BigDecimal getSalesTax() {
+        return salesTax;
+    }
+
+    BigDecimal getTotal() {
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return printing;
     }
 }
